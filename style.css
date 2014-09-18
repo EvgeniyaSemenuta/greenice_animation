@@ -1,0 +1,85 @@
+html, body {
+    margin:0px;
+    padding:0px;
+    height: 100%;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+#fond {
+	border: 1px solid #56004e;
+	background-color: #56004e;
+	width: 880px;
+	height: 660;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -331px;
+	margin-left: -440px;
+	border-radius: 11px;  /* свойство для тех кто его поддерживает */
+  	-moz-border-radius: 11px;  /* для firefox */
+  	-webkit-border-radius: 11px;  /* для Safari и Chrome */
+}
+
+#cover {
+	height: 640px;
+	width: 860px;
+	background: url("images/background_cover.jpg") no-repeat;
+	margin: 10px;
+	border-right: 1px solid #7e3e70;
+	border-bottom: 1px solid #74336e;
+}
+
+#logo_bg {
+	height: 120px;
+	background-color: #ffffff;
+	position: absolute;
+	top: 140px;
+	width: 860px;
+	opacity: 0.5;
+}
+
+#logo {
+	position: absolute;
+	top: 153px;
+	left: 40px;
+	display: block;
+}
+
+#right_text, #left_text {
+	position: absolute;
+	top: 280px;
+}
+
+#right_text {
+	right: 30px;
+	text-align: right;
+	text-transform: uppercase;
+	font-size: 36px;
+	font-weight: bold;
+	color: #d6e03e;
+	font-family: Arial, sans-serif;
+}
+
+.white_text {
+	color: #ffffff;
+	text-transform: none;
+}
+
+#left_text {
+	width: 335px;
+	left: 45px;
+}
+
+.violet_text {
+	color: #56004e;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 21px;
+}
+
+#modes {
+	position: absolute;
+	bottom: 25px;
+	left: 30px;
+}
