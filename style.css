@@ -1,131 +1,198 @@
 html, body {
-    margin:0px;
-    padding:0px;
+    margin: 0px;
+    padding: 0px;
     height: 100%;
     font-family: Arial;
-    font-size: 12px;
+    font-size: 13px;
 }
-
 #fond {
-	border: 1px solid #56004e;
-	background-color: #56004e;
-	width: 880px;
-	height: 660;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -331px;
-	margin-left: -440px;
-	border-radius: 11px;  /* свойство для тех кто его поддерживает */
-  	-moz-border-radius: 11px;  /* для firefox */
-  	-webkit-border-radius: 11px;  /* для Safari и Chrome */
-  	overflow: hidden;
+    border: 1px solid #56004e;
+    background-color: #56004e;
+    width: 880px;
+    height: 660;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -331px;
+    margin-left: -440px;
+    border-radius: 11px;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    overflow: hidden;
 }
-
 #cover {
-	height: 640px;
-	width: 860px;
-	background: url("images/background_cover.jpg") no-repeat;
-	margin: 10px;
-	border-right: 1px solid #7e3e70;
-	border-bottom: 1px solid #74336e;
+    height: 640px;
+    width: 860px;
+    background: url("images/background_cover.jpg") no-repeat;
+    margin: 10px;
+    border-right: 1px solid #7e3e70;
+    border-bottom: 1px solid #74336e;
+    display: none;
 }
-
 #logo_bg, #logo {
-	position: absolute;
+    position: absolute;
 }
-
 #logo_bg {
-	height: 120px;
-	background-color: #ffffff;
-	width: 860px;
-	opacity: 0.5;
+    height: 120px;
+    background-color: #ffffff;
+    width: 860px;
+    opacity: 0.5;
 }
-
 #logo {
-	margin-top: 13px;
-	margin-left: 30px;
-	display: block;
+    margin-top: 13px;
+    margin-left: 30px;
+    display: block;
 }
-
 #right_text, #left_text {
-	position: absolute;
-	top: 280px;
+    position: absolute;
+    top: 280px;
 }
-
 #right_text {
-	right: 30px;
-	text-align: right;
-	text-transform: uppercase;
-	font-size: 36px;
-	font-weight: bold;
-	color: #d6e03e;
-	font-family: Arial, sans-serif;
+    right: 30px;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    color: #d6e03e;
+    font-family: Arial, sans-serif;
 }
-
 .white_text {
-	color: #ffffff;
-	text-transform: none;
+    color: #ffffff;
+    text-transform: none;
 }
-
 #left_text {
-	width: 335px;
-	left: 45px;
-	opacity: 1;
+    width: 335px;
+    left: 45px;
+    opacity: 1;
 }
-
 .violet_text {
-	color: #56004e;
-	font-weight: bold;
-	font-size: 14px;
-	line-height: 21px;
+    color: #56004e;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
 }
-
 #modes {
-	position: absolute;
-	bottom: 25px;
-	left: 30px;
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
 }
-
 .transitive-0 {
-	position: absolute;
-	left: 100% !important;
+    position: absolute;
+    left: 100% !important;
 }
-
 .logo_block {
-	left: 10px;
-	height: 120px;
-	position: absolute;
-	top: 140px;
-	width: 860px;
+    left: 10px;
+    height: 120px;
+    position: absolute;
+    top: 140px;
+    width: 860px;
 }
-
 .transitive_left {
-	-webkit-transition: left 0.5s linear;
-	-moz-transition: left 0.5s linear;
-	-o-transition: left 0.5s linear;
-	transition: left 0.5s linear;
+    -webkit-transition: left 0.5s linear;
+    -moz-transition: left 0.5s linear;
+    -o-transition: left 0.5s linear;
+    transition: left 0.5s linear;
 }
-
 .transitive-1 {
-	position: absolute;
-	right: 100% !important;
+    position: absolute;
+    right: 100% !important;
 }
-
 .transitive_right {
-	-webkit-transition: right 0.5s linear;
-	-moz-transition: right 0.5s linear;
-	-o-transition: right 0.5s linear;
-	transition: right 0.5s linear;
+    -webkit-transition: right 0.5s linear;
+    -moz-transition: right 0.5s linear;
+    -o-transition: right 0.5s linear;
+    transition: right 0.5s linear;
 }
-
 .transitive-2 {
-	opacity: 0 !important;
+    opacity: 0 !important;
 }
-
 .transitive_opacity {
-	-webkit-transition: opacity 0.5s linear;
-	-moz-transition: opacity 0.5s linear;
-	-o-transition: opacity 0.5s linear;
-	transition: opacity 0.5s linear;
+    -webkit-transition: opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+    -o-transition: opacity 0.5s linear;
+    transition: opacity 0.5s linear;
+}
+#basis {
+    background: url("images/background.jpg") no-repeat;
+    width: 860px;
+    height: 640px;
+    margin: 10px;
+    border: 1px solid #ffffff;
+}
+#sheet {
+    background-color: #f7f8d9;
+    width: 840px;
+    height: 505px;
+    margin: 50px 10px;
+    border: 1px solid #f7f8d9;
+    overflow: auto;
+}
+#content {
+    margin: 30px 10px 0px 30px;
+    line-height: 18px;
+}
+#first_head, #second_head {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: normal;
+}
+#first_head {
+    color: #56004e;
+}
+#second_head {
+    color: #4c721d;
+}
+#small_logo {
+    display: block;
+    float: right;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+.continue, .back {
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+.continue {
+    clear: both;
+    text-align: center;
+    color: #4c721d;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+a.continue:hover {
+    color: #56004e;
+}
+a.continue:hover .round {
+    background-color: #56004e; 
+}
+.round {
+	border-radius: 100%;
+	-moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+	color: white;
+}
+.continue .round {
+  background-color: #4c721d;
+  padding: 1px 4px 1px 6px;
+  font-size: 16px;
+}
+.back {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	font-size: 13px;
+	color: #56004e;
+}
+a.back:hover {
+	color: #4c721d;
+}
+.back .round {
+  background-color: #56004e;
+  padding: 0px 4px 0px 3px;
+  font-size: 13px;
+}
+.back:hover .round {
+	background-color: #4c721d;
 }
