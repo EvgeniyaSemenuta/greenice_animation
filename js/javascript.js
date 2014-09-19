@@ -1,12 +1,13 @@
-$(function(){
+$(function() {
+    var transitives = [$(".transitive-0"), $(".transitive-1"), $(".transitive-2")];
 
-  $(".outside_right").on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function () {
-    $(".outside_left").removeClass("outside_left");
-  });
+    for (var i = 0; i < transitives.length - 1; i++) {
+		(function(currentIndex, nextIndex){
+	        transitives[currentIndex].on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function() {
+	            transitives[nextIndex].removeClass("transitive-" + nextIndex);
+	        });
+		})(i, i + 1)
+    }
 
-  $(".outside_left").on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function () {
-    $(".transparent").removeClass("transparent");
-  });
-
-  $(".outside_right").removeClass("outside_right");
+    transitives[0].removeClass("transitive-0");
 });
