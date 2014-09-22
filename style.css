@@ -2,7 +2,7 @@ html, body {
     margin: 0px;
     padding: 0px;
     height: 100%;
-    font-family: Arial;
+    font-family: Trebuchet MS, Arial;
     font-size: 13px;
 }
 #fond {
@@ -76,7 +76,7 @@ html, body {
     bottom: 25px;
     left: 30px;
 }
-.transitive-0 {
+#cover .transitive-0 {
     position: absolute;
     left: 100% !important;
 }
@@ -87,30 +87,18 @@ html, body {
     top: 140px;
     width: 860px;
 }
-.transitive_left {
-    -webkit-transition: left 0.5s linear;
-    -moz-transition: left 0.5s linear;
-    -o-transition: left 0.5s linear;
-    transition: left 0.5s linear;
+.transitive {
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
 }
-.transitive-1 {
+#cover .transitive-1 {
     position: absolute;
     right: 100% !important;
 }
-.transitive_right {
-    -webkit-transition: right 0.5s linear;
-    -moz-transition: right 0.5s linear;
-    -o-transition: right 0.5s linear;
-    transition: right 0.5s linear;
-}
-.transitive-2 {
+#cover .transitive-2 {
     opacity: 0 !important;
-}
-.transitive_opacity {
-    -webkit-transition: opacity 0.5s linear;
-    -moz-transition: opacity 0.5s linear;
-    -o-transition: opacity 0.5s linear;
-    transition: opacity 0.5s linear;
 }
 #basis {
     background: url("images/background.jpg") no-repeat;
@@ -119,13 +107,14 @@ html, body {
     margin: 10px;
     border: 1px solid #ffffff;
 }
-#sheet {
+#slide_1 {
     background-color: #f7f8d9;
     width: 840px;
     height: 505px;
     margin: 50px 10px 0 10px;
     border: 1px solid #f7f8d9;
     overflow: auto;
+    display: none;
 }
 #content {
     margin: 30px 10px 0px 30px;
@@ -142,7 +131,7 @@ html, body {
 #second_head {
     color: #4c721d;
 }
-#small_logo {
+.small_logo {
     display: block;
     float: right;
     margin-top: -15px;
@@ -175,7 +164,7 @@ a.continue:hover .round {
 }
 .continue .round {
   background-color: #4c721d;
-  padding: 1px 4px 1px 6px;
+  padding: 0px 5px 0px 6px;
   font-size: 16px;
 }
 .back {
@@ -246,20 +235,132 @@ a.back:hover {
 	text-indent: 7px;
 	padding-top: 3px;
 }
-#additional_info {
+.additional_info {
 	position: absolute;
-	bottom: 20px;
+	bottom: 13px;
 	right: 20px;
 	list-style: none;
 }
-ul#additional_info li {
+ul.additional_info li {
 	display: inline-block;
 	margin-left: 20px;
 	font-size: 11px;
 	font-weight: bold;
 	color: #56004e;
 }
-ul#additional_info li a {
+ul.additional_info li a {
 	color: #56004e;
 	text-decoration: none;
+}
+ul.additional_info a:hover {
+	color: #4c721d;
+}
+ul.additional_info a:active {
+	color: #d6e03e;
+}
+#right_column {
+	position: absolute;
+	width: 270px;
+	right: 10px;
+	background-color: #f7f8d9;
+	height: 640px;
+	box-shadow: -10px 0px 50px 0px #d1d1d1;
+}
+#info {
+	height: 600px;
+	overflow: auto;
+}
+#info p {
+	margin: 0 5px 20px 16px;
+	line-height: 18px;
+}
+#footer {
+	position: absolute;
+	left: 11px;
+	bottom: 10px;
+}
+#info .small_logo {
+	margin-top: 15px;
+}
+#for_ipad {
+	color: #56004e;
+	margin-top: 10px;
+	text-align: right;
+	margin-right: 10px;
+}
+#questions .additional_info {
+	right: 300px;
+}
+.first_message, .second_message, .third_message, .fourth_message, .fifth_message {
+	position: absolute;
+	color: #56004e;
+}
+.first_message {
+	top: 150px;
+	font-size: 31px;
+	right: 360px;
+	white-space: nowrap;
+}
+.second_message {
+	top: 190px;
+	font-size: 47px;
+	font-weight: bold;
+	left: 30px;
+	white-space: nowrap;
+}
+.third_message {
+	top: 275px;
+	color: #000000;
+	width: 470px;
+	left: 35px;
+	opacity: 1;
+}
+.first_part, #slide_2 .transitive-2 {
+	opacity: 0;
+}
+#slide_2 .transitive-0 {
+	right: 100%;
+}
+#slide_2 .transitive-1 {
+	left: 100%;
+}
+#slide_2 .transitive-3 {
+	opacity: 1;
+}
+.fourth_message {
+	color: #56004e;
+	font-size: 14px;
+	width: 510px;
+	top: 170px;
+	left: 30px;
+	opacity: 1;
+}
+h3 {
+	font-size: 26px;
+	font-family: Arial;
+	margin: 0 0 3px 0;
+}
+#slide_2 .transitive-4, #slide_2 .transitive-5 {
+	opacity: 0;
+}
+.fifth_message {
+	color: #000000;
+	left: 30px;
+	top: 270px;
+	width: 475px;
+	opacity: 1;
+}
+.footnote {
+	display: block;
+	margin-top: 18px;
+}
+.fifth_message .continue {
+	text-align: left;
+	margin-top: 40px;
+}
+.first_part.transitive {
+	-webkit-transition-delay: 2s;
+    -moz-transition-delay: 2s;
+    -o-transition-delay: 2s;
+    transition-delay: 2s;
 }
