@@ -102,7 +102,6 @@ html, body {
 }
 #basis {
     background: url("images/background.jpg") no-repeat;
-    width: 860px;
     height: 640px;
     margin: 10px;
     border: 1px solid #ffffff;
@@ -363,4 +362,104 @@ h3 {
     -moz-transition-delay: 2s;
     -o-transition-delay: 2s;
     transition-delay: 2s;
+}
+#slide_2 {
+	display: none;
+}
+.head_message, .full_length, .medium_length, .short_length {
+	position: absolute;
+	color: #56004e;
+	text-align: center;
+	opacity: 1;
+}
+.head_message {
+	font-size: 23px;
+	top: 125px;
+	width: 500px;
+	font-weight: bold;
+	left: 60px;
+}
+.process_length {
+	position: absolute;
+	top: 220px;
+	left: 80px;
+	width: 460px;
+}
+.full_length, .medium_length, .short_length {
+	display: block;
+	width: 135px;
+	height: 49px;
+	padding-top: 145px;
+	font-size: 16px;
+	text-decoration: none;
+}
+.full_length {
+	background: url("images/full_length.jpg") no-repeat;
+	left: 0px;
+}
+.medium_length {
+	background: url("images/medium_length.jpg") no-repeat;
+	left: 163px;
+}
+.short_length {
+	background: url("images/short_length.jpg") no-repeat;
+	right: 0px;
+}
+h4 {
+	font-size: 22px;
+	margin: 0;
+}
+.full_length:hover {
+	background: url("images/full_length_hover.jpg") no-repeat;
+	color: #ffffff;
+}
+.medium_length:hover {
+	background: url("images/medium_length_hover.jpg") no-repeat;
+	color: #ffffff;
+}
+.short_length:hover {
+	background: url("images/short_length_hover.jpg") no-repeat;
+	color: #ffffff;
+}
+.full_length:active, .medium_length:active, .short_length:active {
+	color: #d5e13c;
+}
+.pointers {
+	position: absolute;
+	left: 75px;
+	top: 445px;
+	width: 470px;
+	opacity: 1;
+}
+.line {
+	background-color: #56004e;
+	color: #ffffff;
+	position: absolute;
+	width: 430px;
+	padding: 3px;
+	font-size: 17px;
+	left: 17px;
+	top: 5px;
+}
+.left_side {
+	display: inline-block;
+	float: right;
+}
+.left_pointer, .right_pointer {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	position: absolute;
+}
+.left_pointer {
+	border-width: 18.5px 17px 18.5px 0;
+	border-color: transparent #56004e transparent transparent;
+}
+.right_pointer {
+	border-width: 18.5px 0 18.5px 17px;
+	border-color: transparent transparent transparent #56004e;
+	right: 0px;
+}
+#slide_3 .transitive-0, #slide_3 .transitive-1, #slide_3 .transitive-2, #slide_3 .transitive-3, #slide_3 .transitive-4 {
+	opacity: 0;
 }

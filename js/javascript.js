@@ -1,18 +1,23 @@
 $(function() {
-    var transitives = [$("#slide_2 .transitive-0"), $("#slide_2 .transitive-1"), $("#slide_2 .transitive-2"), $("#slide_2 .transitive-3"), $("#slide_2 .transitive-4"), $("#slide_2 .transitive-5")];
+    //var transitives = [$("#slide_3 .transitive-0"), $("#slide_3 .transitive-1"), $("#slide_3 .transitive-2"), $("#slide_3 .transitive-3"), $("#slide_3 .transitive-4")];
 
-    for (var i = 0; i < transitives.length - 1; i++) {
-		(function(currentIndex, nextIndex){
-	        transitives[currentIndex].on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
-	            transitives[nextIndex - 1].removeClass("transitive");
-	            transitives[nextIndex].addClass("transitive");
-	            transitives[nextIndex].removeClass("transitive-" + nextIndex);
+    var transitivesLength = $("#slide_3 [class*=transitive-]").length;
 
-	            e.stopPropagation();
-	        });
-		})(i, i + 1)
+    for (var i = 0; i < transitivesLength - 1; i++) {
+        (function(currentIndex, nextIndex) {
+
+            var currentNode = $("#slide_3 .transitive-" + currentIndex);
+            var nextNode = $("#slide_3 .transitive-" + nextIndex);
+
+            currentNode.on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
+                nextNode.addClass("transitive");
+                nextNode.removeClass("transitive-" + nextIndex);
+
+                e.stopPropagation();
+            });
+        })(i, i + 1)
     }
 
-    transitives[0].addClass("transitive");
-    transitives[0].removeClass("transitive-0");
+    $("#slide_3 .transitive-0").addClass("transitive");
+    $("#slide_3 .transitive-0").removeClass("transitive-0");
 });
