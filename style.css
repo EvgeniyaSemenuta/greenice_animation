@@ -392,6 +392,11 @@ h3 {
 	padding-top: 145px;
 	font-size: 16px;
 	text-decoration: none;
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
 }
 .full_length {
 	background: url("images/full_length.jpg") no-repeat;
@@ -460,6 +465,13 @@ h4 {
 	border-color: transparent transparent transparent #56004e;
 	right: 0px;
 }
-#slide_3 .transitive-0, #slide_3 .transitive-1, #slide_3 .transitive-2, #slide_3 .transitive-3, #slide_3 .transitive-4 {
+#slide_3 .transitive-0, #slide_3 .transitive-4 {
 	opacity: 0;
+}
+#slide_3 .transitive-1, #slide_3 .transitive-2, #slide_3 .transitive-3 {
+	transform: scale(0);
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	-ms-transform: scale(0);
 }
