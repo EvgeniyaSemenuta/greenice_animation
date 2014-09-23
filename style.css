@@ -475,3 +475,103 @@ h4 {
 	-o-transform: scale(0);
 	-ms-transform: scale(0);
 }
+#slide_3 {
+	display: none;
+}
+.doctor, .first_phrase, .second_phrase, .left_qoutes, .right_qoutes {
+	position: absolute;
+}
+.doctor {
+	background: url("images/doctor1.png") no-repeat;
+	width: 396px;
+	height: 569px;
+	top: 83px;
+	left: 204px;
+}
+.first_block, .second_block {
+	position: absolute;
+	left: 40px;
+	color: #56004e;
+}
+.first_block {
+	top: 70px;
+	width: 295px;
+}
+.second_block {
+	top: 240px;
+	width: 225px;
+}
+.first_phrase .text {
+	font-size: 25px;
+	position: relative;
+	z-index: 2;
+}
+.left_qoutes {
+	top: -42px;
+	left: -34px;
+	font-size: 150px;
+	color: #e3ea97;
+	z-index: 1;
+}
+.second_phrase .text {
+	font-size: 32px;
+	position: relative;
+	z-index: 2;
+}
+.right_qoutes {
+	color: #e3ea97;
+	font-size: 150px;
+	top: 78px;
+	left: 173px;
+	z-index: 1;
+}
+#slide_4 .continue {
+	position: absolute;
+	text-align: left;
+	bottom: 130px;
+	left: 40px;
+	opacity: 1;
+}
+#slide_4 .transitive-0 {
+	top: 100%;
+}
+.first_phrase, .second_phrase {
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+}
+#slide_4 .transitive-1, #slide_4 .transitive-2 {
+	transform: scale(0);
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	-ms-transform: scale(0);
+}
+#slide_4 .transitive-3 {
+	opacity: 0;
+}
+.progress {
+	position: absolute;
+	top: 20px;
+	right: 295px;
+	color: #56004e;
+	text-align: center;
+}
+.progress_name {
+	font-size: 10px;
+	margin-left: 15px;
+}
+.progress_lines {
+	background-color: #d6e23f;
+	height: 8px;
+	width: 80px;
+	display: inline-block;
+	margin-left: 3px;
+}
+.progress_bar {
+	background-color: #56004e;
+	height: 8px;
+	width: 2px;
+}
