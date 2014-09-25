@@ -100,6 +100,9 @@ html, body {
 #slide_0 .transitive-2 {
     opacity: 0 !important;
 }
+#slide_0 .continue {
+	display: none;
+}
 #basis {
     background: url("images/background.jpg") no-repeat;
     position: relative;

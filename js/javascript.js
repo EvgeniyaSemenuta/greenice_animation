@@ -43,9 +43,16 @@ $(function() {
     window.location.hash = "#slide_0";
     startTransitionForSlide($(window.location.hash));
 
+    $("#slide_0 [data-transition-order=2]").on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
+        setTimeout(function() {
+            $("#slide_0 .next").click();
+            window.location.hash = "#slide_1";
+        }, 3000);
+    });
+
     $(".next").click(function() {
         var href = $(this).attr("href");
-
+        
         $("." + window.location.hash.substr(1)).hide();
 
         resetTransitionsForSlide($(window.location.hash));
