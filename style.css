@@ -20,7 +20,7 @@ html, body {
     -webkit-border-radius: 11px;
     overflow: hidden;
 }
-#cover {
+#slide_0 {
     height: 640px;
     width: 860px;
     background: url("images/background_cover.jpg") no-repeat;
@@ -76,7 +76,7 @@ html, body {
     bottom: 25px;
     left: 30px;
 }
-#cover .transitive-0 {
+#slide_0 .transitive-0 {
     position: absolute;
     left: 100% !important;
 }
@@ -93,11 +93,11 @@ html, body {
     -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
-#cover .transitive-1 {
+#slide_0 .transitive-1 {
     position: absolute;
     right: 100% !important;
 }
-#cover .transitive-2 {
+#slide_0 .transitive-2 {
     opacity: 0 !important;
 }
 #basis {
@@ -170,8 +170,8 @@ a.continue:hover .round {
 }
 .back {
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 12px;
+    left: 10px;
     font-size: 13px;
     color: #56004e;
     z-index: 10;
@@ -322,7 +322,7 @@ ul.additional_info a:active {
 .first_message {
     top: 150px;
     font-size: 31px;
-    right: 360px;
+    right: 335px;
     white-space: nowrap;
 }
 .second_message {
@@ -858,4 +858,10 @@ ul#patients_number_counter li:after {
 }
 #slide_5 {
 	display: none;
+}
+.doctor_container {
+	position: absolute;
+    width: 396px;
+    height: 569px;
+    top: 72px;
 }
