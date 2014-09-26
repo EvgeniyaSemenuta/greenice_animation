@@ -30,7 +30,6 @@ html, body {
     margin: 10px;
     border-right: 1px solid #7e3e70;
     border-bottom: 1px solid #74336e;
-    /*display: none;*/
 }
 #logo_bg, #logo {
     position: absolute;
@@ -414,6 +413,12 @@ h3 {
     -moz-transition-delay: 2s;
     -o-transition-delay: 2s;
     transition-delay: 2s;
+}
+.doctor.transitive{
+    -webkit-transition-duration: 0.1s;
+    -moz-transition-duration: 0.1s;
+    -o-transition-duration: 0.1s;
+    transition-duration: 0.1s;
 }
 .head_message, .full_length, .medium_length, .short_length {
     position: absolute;
