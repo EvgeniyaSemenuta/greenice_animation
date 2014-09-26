@@ -45,6 +45,7 @@ $(function() {
                     currentNode.one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
                         startTransition.call(nextNode);
                         e.stopPropagation();
+                        e.preventDefault();
                     });
                 } else {
                     setTimeout(function() {
@@ -57,7 +58,7 @@ $(function() {
         setTimeout(function() {
             if (transitives.length)
                 startTransition.call($(transitives[0]));
-        }, 0);
+        }, 100);
     }
 
     var resetTransitionsForSlide = function(slide) {
