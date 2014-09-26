@@ -1,5 +1,24 @@
 $(function() {
 
+    var isTransitionSupported = function() {
+        var b = document.body || document.documentElement,
+            s = b.style,
+            p = 'transition';
+
+        if (typeof s[p] == 'string')
+            return true;
+
+        var v = ['Moz', 'webkit', 'Webkit', 'Khtml', 'O', 'ms'];
+        p = p.charAt(0).toUpperCase() + p.substr(1);
+
+        for (var i = 0; i < v.length; i++) {
+            if (typeof s[v[i] + p] == 'string')
+                return true;
+        }
+
+        return false;
+    }();
+
     $("#slider").slider({
         min: 0,
         max: 15,
@@ -9,7 +28,7 @@ $(function() {
     });
 
     $("a.dead").click(function(e) {
-    	e.preventDefault();
+        e.preventDefault();
     });
 
     var startTransitionForSlide = function(slide) {
@@ -22,10 +41,16 @@ $(function() {
 
         for (var i = 0; i < transitives.length - 1; i++) {
             (function(currentNode, nextNode) {
-                currentNode.one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
-                    startTransition.call(nextNode);
-                    e.stopPropagation();
-                });
+                if (isTransitionSupported) {
+                    currentNode.one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
+                        startTransition.call(nextNode);
+                        e.stopPropagation();
+                    });
+                } else {
+                    setTimeout(function() {
+                        startTransition.call(nextNode);
+                    }, 500 * (i + 1));
+                }
             })($(transitives[i]), $(transitives[i + 1]));
         }
 
@@ -47,16 +72,23 @@ $(function() {
     window.location.hash = "#slide_0";
     startTransitionForSlide($(window.location.hash));
 
-    $("#slide_0 [data-transition-order=2]").on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(e) {
+    var openSecondSlide = function() {
         setTimeout(function() {
             $("#slide_0 .next").click();
             window.location.hash = "#slide_1";
         }, 3000);
-    });
+    }
+
+    if (isTransitionSupported) {
+        $("#slide_0 [data-transition-order=2]").on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', openSecondSlide);
+    } else {
+    	openSecondSlide();
+    	$("a[href='#slide_0']").click(openSecondSlide);
+    }
 
     $(".next").click(function() {
         var href = $(this).attr("href");
-        
+
         $("." + window.location.hash.substr(1)).hide();
 
         resetTransitionsForSlide($(window.location.hash));
