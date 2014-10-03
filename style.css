@@ -71,7 +71,7 @@ html, body {
     color: #ffffff;
     text-transform: none;
 }
-#left_text, .third_message, #slide_2 .transitive-3, .fourth_message, .fifth_message, .head_message, .full_length, .medium_length, .short_length, .pointers, #slide_4 .continue, #slide_6 .continue {
+#left_text, .third_message, .fourth_message, .fifth_message, .head_message, .full_length, .medium_length, .short_length, .pointers, #slide_4 .continue, #slide_6 .continue {
     opacity: 1;
     -moz-opacity: 1;
     -khtml-opacity: 1;
@@ -94,10 +94,6 @@ html, body {
     bottom: 25px;
     left: 30px;
 }
-#slide_0 .transitive-0 {
-    position: absolute;
-    left: 100% !important;
-}
 .logo_block {
     left: 10px;
     height: 120px;
@@ -105,17 +101,7 @@ html, body {
     top: 140px;
     width: 860px;
 }
-.transitive {
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-}
-#slide_0 .transitive-1 {
-    position: absolute;
-    right: 100% !important;
-}
-#slide_0 .transitive-2, .first_part, #slide_2 .transitive-2, #slide_2 .transitive-4, #slide_2 .transitive-5, #slide_3 .transitive-0, #slide_3 .transitive-4, #slide_4 .transitive-3, #slide_6 .transitive-2 {
+.first_part {
     opacity: 0;
     -moz-opacity: 0;
     -khtml-opacity: 0;
@@ -381,12 +367,6 @@ ul.additional_info a:active {
     left: 35px;
     position: relative;
 }
-#slide_2 .transitive-0 {
-    right: 100%;
-}
-#slide_2 .transitive-1 {
-    left: 100%;
-}
 .fourth_message {
     color: #56004e;
     font-size: 14px;
@@ -524,13 +504,6 @@ h4 {
     border-color: transparent transparent transparent #56004e;
     right: 0px;
 }
-#slide_3 .transitive-1, #slide_3 .transitive-2, #slide_3 .transitive-3, #slide_4 .transitive-1, #slide_4 .transitive-2, #slide_6 .transitive-1 {
-    transform: scale(0);
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -o-transform: scale(0);
-    -ms-transform: scale(0);
-}
 .doctor, .first_phrase, .second_phrase, .left_qoutes, .right_qoutes, .first_block, .second_block {
     position: absolute;
 }
@@ -582,9 +555,6 @@ h4 {
     text-align: left;
     bottom: 130px;
     left: 40px;
-}
-#slide_4 .transitive-0, #slide_6 .transitive-0 {
-    top: 100%;
 }
 .progress {
     position: absolute;
@@ -845,4 +815,43 @@ ul#patients_number_counter li:after {
     width: 396px;
     height: 569px;
     top: 72px;
+}
+.transitive {
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.transitive-left-to-right {
+    position: absolute;
+    right: 100% !important;
+}
+.transitive-right-to-left {
+    position: absolute;
+    left: 100% !important;
+}
+.transitive-bottom-to-top {
+    top: 100%;
+}
+.transitive-appearance {
+    opacity: 0 !important;
+    -moz-opacity: 0 !important;
+    -khtml-opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" !important;
+}
+.transitive-disappearance {
+    opacity: 1 !important;
+    -moz-opacity: 1 !important;
+    -khtml-opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" !important;
+    display: block\0;
+}
+.transitive-scale {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
 }

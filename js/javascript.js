@@ -38,7 +38,7 @@ $(function() {
             return a.getAttribute('data-transition-order') > b.getAttribute('data-transition-order') ? 1 : -1;
         });
         var startTransition = function() {
-            this.addClass("transitive").removeClass("transitive-" + this.data("transition-order"));
+            this.addClass("transitive").removeClass("transitive-" + this.data("transition-name"));
         }
 
         for (var i = 0; i < transitives.length - 1; i++) {
@@ -70,7 +70,7 @@ $(function() {
 
         transitives.each(function() {
             var transitive = $(this);
-            transitive.addClass("transitive-" + transitive.data("transition-order")).removeClass("transitive");
+            transitive.addClass("transitive-" + transitive.data("transition-name")).removeClass("transitive");
         });
     }
 
