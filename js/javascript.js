@@ -32,6 +32,8 @@ $(function() {
     });
 
     var startTransitionForSlide = function(slide) {
+    	slide.show();
+
         var transitives = slide.find("[data-transition-order]").sort(function(a, b) {
             return a.getAttribute('data-transition-order') > b.getAttribute('data-transition-order') ? 1 : -1;
         });
@@ -62,6 +64,8 @@ $(function() {
     }
 
     var resetTransitionsForSlide = function(slide) {
+    	slide.hide();
+
         var transitives = slide.find("[data-transition-order]");
 
         transitives.each(function() {
@@ -83,19 +87,27 @@ $(function() {
     if (isTransitionSupported) {
         $("#slide_0 [data-transition-order=2]").on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', openSecondSlide);
     } else {
-    	openSecondSlide();
-    	$("a[href='#slide_0']").click(openSecondSlide);
+        openSecondSlide();
+        $("a[href='#slide_0']").click(openSecondSlide);
     }
 
     $(".next").click(function() {
-        var href = $(this).attr("href");
+        var currentSlide = $(this).parents(".slide");
+        var nextSlide = currentSlide.next(".slide");
+        if (nextSlide.length) {
+            resetTransitionsForSlide(currentSlide);
+            startTransitionForSlide(nextSlide);
+        }
 
-        $("." + window.location.hash.substr(1)).hide();
+    });
 
-        resetTransitionsForSlide($(window.location.hash));
+    $(".back").click(function() {
+        var currentSlide = $(this).parents(".slide");
+        var prevSlide = currentSlide.prev(".slide");
 
-        $("." + href.substr(1)).show();
-
-        startTransitionForSlide($(href));
+        if (prevSlide.length) {
+            resetTransitionsForSlide(currentSlide);
+            startTransitionForSlide(prevSlide);
+        };
     });
 });

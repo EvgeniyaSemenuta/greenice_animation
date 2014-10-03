@@ -122,7 +122,10 @@ html, body {
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
-#slide_0 .continue, #slide_2, #slide_3, #slide_4, #slide_5, #slide_6 {
+#slide_0 .continue {
+    display: none;
+}
+.slide:not(:first-child) {
     display: none;
 }
 .basis {
