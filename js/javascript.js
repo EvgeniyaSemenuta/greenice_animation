@@ -19,11 +19,11 @@ $(function() {
         return false;
     }();
 
-    $("#slider").slider({
+    $(".my_slider").slider({
         min: 0,
         max: 15,
         slide: function(event, ui) {
-            $("#patients_amount").text(ui.value);
+            $(this).parents(".slider_container").find(".slider_value").text(ui.value);
         }
     });
 
@@ -74,13 +74,11 @@ $(function() {
         });
     }
 
-    window.location.hash = "#slide_0";
-    startTransitionForSlide($(window.location.hash));
+    startTransitionForSlide($(".slide:first-child"));
 
     var openSecondSlide = function() {
         setTimeout(function() {
             $("#slide_0 .next").click();
-            window.location.hash = "#slide_1";
         }, 3000);
     }
 

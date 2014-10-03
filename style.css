@@ -765,11 +765,11 @@ a.continue:active .round {
 #slide_5 .right_column {
     box-shadow: none;
 }
-#slider {
+.my_slider {
     width: 520px;
-    height: 5px;
+    height: 5px !important;
     background-color: #7c7f48;
-    position: absolute;
+    position: absolute !important;
     top: 160px;
     left: -7px;
 }
