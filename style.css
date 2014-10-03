@@ -23,6 +23,11 @@ html, body {
     -o-border-radius: 11px;
     -ms-border-radius: 11px;
 }
+.left_column {
+    position: absolute;
+    width: 588px;
+    height: 641px;
+}
 #slide_0 {
     height: 640px;
     width: 860px;
@@ -117,10 +122,10 @@ html, body {
     filter: alpha(opacity=0);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
-#slide_0 .continue, #basis, #slide_1, #questions, #slide_2, #slide_3, #slide_4, #slide_5, #slide_6 {
+#slide_0 .continue, #slide_2, #slide_3, #slide_4, #slide_5, #slide_6 {
     display: none;
 }
-#basis {
+.basis {
     background: url("images/background.jpg") no-repeat;
     position: relative;
     height: 640px;
@@ -222,7 +227,7 @@ a.back:active {
     font-size: 11px;
     margin: 15px 0 0 10px;
 }
-#full_info {
+.full_info {
     display: block;
     height: 15px;
     text-decoration: none;
@@ -255,14 +260,14 @@ a.back:active {
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#92388a', endColorstr='#3a0034', GradientType=0);
     /* IE6-9 */
 }
-#full_info:hover {
+.full_info:hover {
     border: 1px solid #3f223b;
     width: 163px;
     height: 14px;
     text-indent: 8px;
     padding-top: 4px;
 }
-#full_info:active, #slide_5 #full_info:active {
+.full_info:active, #slide_5 .full_info:active {
     background: rgb(58, 0, 52);
     /* Old browsers */
     background: -moz-linear-gradient(top, rgba(58, 0, 52, 1) 0%, rgba(147, 57, 138, 1) 100%, rgba(58, 0, 52, 1) 100%, rgba(58, 0, 52, 1) 100%, rgba(147, 57, 138, 1) 100%, rgba(58, 0, 52, 1) 100%, rgba(58, 0, 52, 1) 100%, rgba(41, 137, 216, 1) 100%, rgba(58, 0, 52, 1) 100%, rgba(58, 0, 52, 1) 100%, rgba(58, 0, 52, 1) 100%);
@@ -305,7 +310,7 @@ ul.additional_info a:hover {
 ul.additional_info a:active {
     color: #d6e03e;
 }
-#right_column {
+.right_column {
     position: absolute;
     width: 270px;
     right: 0px;
@@ -313,23 +318,23 @@ ul.additional_info a:active {
     height: 640px;
     box-shadow: -20px 0 22px -7px #d1d1d1;
 }
-#info {
+.info {
     height: 600px;
     overflow: auto;
 }
-#info p {
+.info p {
     margin: 0 5px 20px 16px;
     line-height: 18px;
 }
-#footer {
+.footer {
     position: absolute;
     left: 0px;
     bottom: 0px;
 }
-#info .small_logo {
+.info .small_logo {
     margin-top: 15px;
 }
-#for_ipad {
+.for_ipad {
     color: #56004e;
     text-align: right;
     margin-right: 5px;
@@ -340,9 +345,6 @@ ul.additional_info a:active {
     font-weight: bold;
     display: inline-block;
     margin-left: 2px;
-}
-#questions .additional_info {
-    right: 300px;
 }
 .first_part {
     position: absolute;
@@ -584,7 +586,7 @@ h4 {
 .progress {
     position: absolute;
     top: 20px;
-    right: 295px;
+    right: 15px;
     color: #56004e;
     text-align: center;
 }
@@ -634,10 +636,12 @@ a.continue:active .round {
     bottom: 310px;
 }
 #slide_5 {
-    width: 590px;
+    width: 859px;
     height: 640px;
     background: url("images/slide5_bg.jpg");
-    position: relative;
+    position: absolute;
+    top: 11px;
+    left: 10px;
     z-index: 15;
     border-right: 1px solid #7e3e70;
     border-bottom: 1px solid #74336e;
@@ -694,9 +698,6 @@ a.continue:active .round {
 #slide_5 a.continue:hover .round {
     background-color: #d6e03e;
 }
-#slide_5 .additional_info {
-    right: 20px;
-}
 #slide_5 ul.additional_info li a, #slide_5 .tip {
     color: #ffffff;
 }
@@ -706,14 +707,14 @@ a.continue:active .round {
 #slide_5 ul.additional_info li a:active {
     color: #d6e03e;
 }
-#slide_5 #full_info:link {
+#slide_5 .full_info:link {
     color: #56004e;
     background: none;
     background-color: #ffffff;
     font-weight: bold;
     text-indent: 4px;
 }
-#slide_5 #full_info:hover {
+#slide_5 .full_info:hover {
     text-indent: 3px;
     background: rgb(146, 56, 138);
     /* Old browsers */
@@ -733,10 +734,10 @@ a.continue:active .round {
     /* IE6-9 */
     color: #ffffff !important;
 }
-#slide_5 #full_info:active {
+#slide_5 .full_info:active {
     color: #ffffff !important;
 }
-#slide_5 #full_info:visited {
+#slide_5 .full_info:visited {
     color: #56004e;
 }
 #slide_5 .back {
@@ -757,6 +758,9 @@ a.continue:active .round {
 }
 #slide_5 .back:active {
     color: #d6e03e;
+}
+#slide_5 .right_column {
+    box-shadow: none;
 }
 #slider {
     width: 520px;
