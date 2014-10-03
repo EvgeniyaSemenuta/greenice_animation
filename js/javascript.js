@@ -86,7 +86,7 @@ $(function() {
         $("#slide_0 [data-transition-order=2]").on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', openSecondSlide);
     } else {
         openSecondSlide();
-        $("a[href='#slide_0']").click(openSecondSlide);
+        $("#slide_0 .next").click(openSecondSlide);
     }
 
     $(".next").click(function() {
